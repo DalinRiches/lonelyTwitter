@@ -12,6 +12,7 @@ import java.util.Date;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -37,11 +38,13 @@ public class LonelyTwitterActivity extends Activity {
 		saveButton.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				setResult(RESULT_OK);
-				String text = bodyText.getText().toString();
-				saveInFile(text, new Date(System.currentTimeMillis()));
-				finish();
+				Cat cat1 = new Cat("Cat", "Fish");
+				DomesticDuck duck1 = new DomesticDuck("Duck", "Bread");
 
+				Log.d("Button Listener", cat1.getType());
+				Log.d("Button Listener", cat1.getFood());
+				Log.d("Button Listener", duck1.getType());
+				Log.d("Button Listener", duck1.getFood());
 			}
 		});
 	}
