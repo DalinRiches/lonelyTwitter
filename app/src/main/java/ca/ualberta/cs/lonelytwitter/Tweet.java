@@ -36,4 +36,9 @@ public abstract class Tweet {
     }
 
     public abstract Boolean isImportant();
+
+    @Override
+    public String toString() {
+        return this.date.toString() + "|" + this.message;
+    }
 }
